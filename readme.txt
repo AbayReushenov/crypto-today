@@ -42,4 +42,4 @@ npm i bootstrap
 
 в coinmarketcap-clone/pages/_app.js
 
-
+В  crypto/package.json исправить "start": "next start -p $PORT"

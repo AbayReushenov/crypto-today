@@ -5,13 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.6.0",
     "coingecko-api": "^1.0.10",
-    "next": "^10.0.7",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }

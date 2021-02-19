@@ -5,7 +5,7 @@ const coinGeckoClient = new CoinGecko();
 
 export default function Home(props) {
   const { data } = props.result;
-  console.log(data);
+  // console.log(data);
   const formatPercent = (number) => `${new Number(number).toFixed(2)}%`;
 
   const formatDollar = (number, maximumSignificantDigits) =>
@@ -22,7 +22,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h4>Криптовалюты в реальном времени</h4>
-      <div class="table-responsive-sm">
+      <div className="table-responsive-sm">
         <table className="table table-striped">
           <thead>
             <tr>
