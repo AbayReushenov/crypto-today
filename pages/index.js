@@ -11,7 +11,7 @@ import Ups from './info2.';
 export default function Home(props, props2) {
   const { data } = props.result;
 
-  console.log(data);
+  // console.log(data);
   // console.log({ data2 });
   const formatPercent = (number) => `${new Number(number).toFixed(2)}%`;
 
