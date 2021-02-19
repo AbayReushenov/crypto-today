@@ -1,11 +1,18 @@
+import React from 'react';
+import { Route, BrowserRouter } from 'react-router-dom';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import CoinGecko from 'coingecko-api';
 const coinGeckoClient = new CoinGecko();
+const coinGeckoClientBTC = new CoinGecko();
+import Info from './info';
+import Ups from './info2.';
 
-export default function Home(props) {
+export default function Home(props, props2) {
   const { data } = props.result;
-  // console.log(data);
+
+  console.log(data);
+  // console.log({ data2 });
   const formatPercent = (number) => `${new Number(number).toFixed(2)}%`;
 
   const formatDollar = (number, maximumSignificantDigits) =>
@@ -21,6 +28,7 @@ export default function Home(props) {
         <title>Криптовалюты</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Info />
       <h4>Криптовалюты в реальном времени</h4>
       <div className="table-responsive-sm">
         <table className="table table-striped">
@@ -30,6 +38,7 @@ export default function Home(props) {
               <th scope="col">Символ</th>
               <th scope="col">24часа изм.</th>
               <th scope="col">Цена</th>
+              <th scope="col">Стоимость вложения 1000$ на 3 года</th>
               <th scope="col">Рыночная капитализация</th>
             </tr>
           </thead>
@@ -56,6 +65,9 @@ export default function Home(props) {
                   </span>
                 </td>
                 <td>{formatDollar(coin.current_price, 20)}</td>
+                <td id="{coin.id}">
+                  <Ups />
+                </td>
                 <td>{formatDollar(coin.market_cap, 12)}</td>
               </tr>
             ))}
@@ -77,3 +89,8 @@ export async function getServerSideProps(context) {
     },
   };
 }
+
+const hist = {
+  bitcoin: 9605,
+  ethereum: 1931.01,
+};
