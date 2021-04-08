@@ -4,7 +4,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import CoinGecko from 'coingecko-api';
 const coinGeckoClient = new CoinGecko();
-const coinGeckoClientBTC = new CoinGecko();
 import Info from './info';
 import Ups from './info2.';
 

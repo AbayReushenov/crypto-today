@@ -10,7 +10,7 @@ export default function ups(){
     saySomething("from useEffect");
   });
   const handleClick = (e) => {
-    e.target.textContent="Всё будет хорошо!";
+    e.target.textContent="Здесь могла быть ваша реклама";
   };
   return (
     <Button variant="contained" color="primary" onClick={handleClick}>

@@ -4,7 +4,7 @@ import React from 'react';
 function Info() {
   return (
     <div className="container-fluid">
-      <h2>Elbrus bootcamp</h2>
+      <h2>Продаю сайт</h2>
       <Cripta />
     </div>
   );
@@ -13,5 +13,7 @@ function Info() {
 export default Info;
 
 function Cripta() {
-  return <h7>Phase 2</h7>;
+  return <>
+  <h7>abay.reushenov@gmail.com</h7>
+  </>;
 }
